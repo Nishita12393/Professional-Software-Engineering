@@ -1,0 +1,9 @@
+Quantum computing:
+
+QISKIT - IBM - 
+CIRQ - google based
+Sim - uos
+
+
+version of qiskit : py -m venv env
+to activate the version : env\scripts\activate
