@@ -15,4 +15,9 @@ student_average = np.round(np.average(scores, 1),2)
 print(f"Average of each student: {student_average}")
 subject_average = np.round(np.average(scores, 0),2)
 print(f"Average of each subject: {subject_average}")
-# highest_score_student = 
+highest_score_student = np.argmax(np.sum(scores, 1))+1
+print(f"Student {highest_score_student} has the highest total score")
+
+additional_score = 5
+scores[:, -1] = scores[:, -1] + additional_score
+print(scores)
