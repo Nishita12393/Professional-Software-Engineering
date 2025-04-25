@@ -21,3 +21,4 @@ print(f"Student {highest_score_student} has the highest total score")
 additional_score = 5
 scores[:, -1] = scores[:, -1] + additional_score
 print(scores)
+
