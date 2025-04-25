@@ -1,0 +1,36 @@
+File test1.py
+
+using average function from numpy library.
+The numpy.average(temp) calculates the average of all the temperatures.
+Using round which is a bult-in function of python
+round(..., 2) rounds it to 2 decimal places.
+numpy.max(temp) finds the highest temperature.
+numpy.min(temp) finds the lowest temperature
+f is an empty list that will store Fahrenheit values.
+indexes is another list that will store the day numbers (by index) when the temperature was above 20°C.for idx, x in enumerate(temp):
+
+for idx, x in enumerate(temp):
+using for Loop through each temperature using enumerate a builtin function of python that keeps track of index and loop over the list
+idx gives the index (position) — starts at 0.
+x gives the temperature value.
+
+y = x * 9/5 + 32
+    f.append(y)
+converting the temperature from celsius to farenheit using the above formula
+append add the converted Fahrenheit temperature (y) to the list f.
+
+if(x > 20):
+        indexes.append(idx + 1)
+If the temperature is above 20°C and it adds the day index (idx + 1) to the indexes list
+Because index starts from 0 whereas days start from 1 to show the day i added 
++1. 
+
+
+File test2.py
+integers.shape is used to give the size and structure of the array.
+integers.dtype is used to give the type of data stored in the array.
+I multiplyied each element in the array by 2 using to give the each element in double as per question.
+
+
+
+File test3.py
