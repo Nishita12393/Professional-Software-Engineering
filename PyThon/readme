@@ -26,14 +26,14 @@ Because index starts from 0 whereas days start from 1 to show the day i added
 +1. 
 
 
-File test2.py
+File activity1.py
 integers.shape is used to give the size and structure of the array.
 integers.dtype is used to give the type of data stored in the array.
 I multiplyied each element in the array by 2 using to give the each element in double as per question.
 
 
 
-File test3.py
+File activity2.py
 For the average score of each student, I used average function of python in scores array 
 student_average = np.round(np.average(scores, 1),2)
 In 2 dimension array 1 denotes x axis and 0 denotes y axis. For the round of the each element in array i used round library of numpy.
