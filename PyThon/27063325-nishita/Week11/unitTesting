@@ -1,0 +1,53 @@
+import unittest
+import math
+from calculator import (
+    add, subtract, multiply, divide,
+    power, root, sine, cosine, tangent
+)
+
+class TestEngineeringCalculator(unittest.TestCase):
+
+    def test_add(self):
+        self.assertEqual(add(3, 2), 5)
+
+    def test_subtract(self):
+        self.assertEqual(subtract(5, 2), 3)
+
+    def test_multiply(self):
+        self.assertEqual(multiply(4, 3), 12)
+
+    def test_divide(self):
+        self.assertEqual(divide(10, 2), 5)
+
+    def test_divide_by_zero(self):
+        with self.assertRaises(ValueError) as context:
+            divide(5, 0)
+        self.assertEqual(str(context.exception), "Cannot divide by zero")
+
+    def test_power(self):
+        self.assertEqual(power(2, 3), 8)
+
+    def test_root(self):
+        self.assertAlmostEqual(root(27, 3), 3)
+    
+    def test_root_negative_even(self):
+        with self.assertRaises(ValueError) as context:
+            root(-8, 2)
+        self.assertEqual(str(context.exception), "Cannot take even root of a negative number")
+
+    def test_sine(self):
+        self.assertAlmostEqual(sine(30), 0.5, places=2)
+
+    def test_cosine(self):
+        self.assertAlmostEqual(cosine(60), 0.5, places=2)
+
+    def test_tangent(self):
+        self.assertAlmostEqual(tangent(45), 1.0, places=2)
+
+    def test_tangent_undefined(self):
+        with self.assertRaises(ValueError) as context:
+            tangent(90)
+        self.assertEqual(str(context.exception), "Tangent undefined at 90, 270, 450... degrees")
+
+if __name__ == '__main__':
+    unittest.main()
